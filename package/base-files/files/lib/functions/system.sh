@@ -87,6 +87,10 @@ macaddr_add() {
 	echo $oui:$nic
 }
 
+macaddr_geteui() {
+    echo ${1:9:2}${1:12:2}${1:15:2}
+}
+
 macaddr_setbit_la()
 {
 	local mac=$1
